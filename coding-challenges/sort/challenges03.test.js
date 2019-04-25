@@ -204,6 +204,9 @@ const meetings = [
 
 const sortMeetingsByDay = (arr) => {
   // Solution code here...
+  const daysInOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+  arr.sort( (a, b) => daysInOrder.indexOf(a.dayOfWeek) - daysInOrder.indexOf(b.dayOfWeek));
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
