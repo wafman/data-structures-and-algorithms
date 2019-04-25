@@ -24,7 +24,6 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
-  // arr.sort((a,b) => a - b);
   arr.sort();
   return arr;
 };
@@ -128,6 +127,18 @@ const people = [
 
 const sortPeople = (arr) => {
   // Solution code here...
+  arr.sort(function(a,b){
+    if(a.lastName < b.lastName){
+      return -1;
+    }
+    if(a.lastName > b.lastName){
+      return 1;
+    }
+    if(a.lastName === b.lastName){
+      return 0;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
