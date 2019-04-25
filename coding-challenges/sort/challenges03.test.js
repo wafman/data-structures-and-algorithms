@@ -25,17 +25,7 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 const alphabetize = (arr) => {
   // Solution code here...
   // arr.sort((a,b) => a - b);
-  arr.sort(function(a,b){
-    if(a < b){
-      return -1;
-    }
-    if(a > b){
-      return 1;
-    }
-    if(a === b){
-      return 0;
-    }
-  });
+  arr.sort();
   return arr;
 };
 
@@ -114,6 +104,8 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
+  arr.sort((a,b) => a.toString().length - b.toString().length);
+  return arr;
 };
 
 /*-----------------------------------------------------------------------------------------------
