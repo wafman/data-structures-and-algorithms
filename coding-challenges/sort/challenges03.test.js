@@ -221,6 +221,28 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 
 const sortSchedule = (arr) => {
   // Solution code here...
+  // arr.sort( (a,b) => {
+  //   if(a.start < b.start){
+  //     return -1;
+  //   }
+  //   if(a.start > b.start){
+  //     return 1;
+  //   }
+  //   if((a.start === b.start) && (a.dayOfWeek === b.dayOfWeek)){
+  //     let aDiff = a.start - a.end;
+  //     let bDiff = b.start - b.end;
+  //     if(aDiff < bDiff){
+  //       return -1;
+  //     }
+  //     if(aDiff > bDiff){
+  //       return 1;
+  //     }
+  //     if(aDiff === bDiff){
+  //       return 0;
+  //     }
+  //   }
+  // });
+  // return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
