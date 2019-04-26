@@ -15,8 +15,11 @@ For example:
 const isNum = (input) => {
   // Solution code here...
   let reg = /\d/;
-  reg.test(input);
-  return input;
+  if(reg.test(input)){
+    return input;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,7 +53,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 const citiesAtoJ = (arr) => {
   // Solution code here...
   let newArr = [];
-  let reg = /^[A-J]/g;
+  let reg = /[A-J]/g;
   arr.forEach(word => {
     if(word.match(reg)){
       word.match(reg).forEach(match => {
@@ -91,6 +94,14 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 
 const noPunctuation = str => {
   // Solution code here...
+  let arr = [];
+  let reg = /\s.*$/;
+  if(str.match(reg)){
+    str.match(reg).forEach(word => {
+      arr.push(`${word} `);
+    });
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,6 +118,9 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 
 let hangman = (str) => {
   // Solution code here...
+  let reg = /[aeiou]/gi;
+  str = str.replace(reg, '_');
+  return str;
 };
 
 /* ------------------------------------------------------------------------------------------------
