@@ -55,6 +55,9 @@ const citiesAtoJ = (arr) => {
   let newArr = [];
   let reg = /[A-J]/g;
   arr.forEach(word => {
+    // word.match(reg).forEach(match => {
+    //   newArr.push(match);
+    // });
     if(word.match(reg)){
       word.match(reg).forEach(match => {
         newArr.push(match);
@@ -95,12 +98,10 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 const noPunctuation = str => {
   // Solution code here...
   let arr = [];
-  let reg = /\s.*$/;
-  if(str.match(reg)){
-    str.match(reg).forEach(word => {
-      arr.push(`${word} `);
-    });
-  }
+  let reg = /[a-z0-9]*\w\s/gi;
+  str.match(reg).forEach(word => {
+    arr.push(word);
+  });
   return arr;
 };
 
