@@ -155,6 +155,12 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
+  arr.forEach( item => {
+    if(item % 2 === 0){
+      // let place = arr.indexOf(item);
+      arr.splice(item, 1);
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -174,6 +180,15 @@ removeLastCharacters('Gregor', 9) returns ''
 
 const removeLastCharacters = (str, numberOfCharacters) => {
   // Solution code here...
+  if(numberOfCharacters > str.length){
+    str = '';
+    return str;
+  } else if(numberOfCharacters < 0) {
+    return str;
+  } else {
+    str.subString(str.length - numberOfCharacters);
+    return str;
+  }
 };
 
 
