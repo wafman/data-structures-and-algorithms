@@ -83,7 +83,24 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  gruffaloCrumble.indexOf('ingredients');
+  // console.log(recipe);
+  let holder = recipe.ingredients;
+  
+  // holder.forEach( index => {
+  //   let ingredient = index.split(' ');
+  //   result.push(ingredient[ingredient.length - 1]);
+  // });
+  holder.forEach(index => {
+    let space = index.indexOf(' ');
+    // let temp = index.slice(space);
+    // let nextSpace = temp.indexOf(' ');
+    // result.push(temp.slice(space));
+    result.push(index.slice(space));
+  });
+  // result.forEach( item => {
+  //   let space = item.indexOf(' ');
+  //   item = item.slice(space);
+  // });
 
   return result;
 };
@@ -115,6 +132,11 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
+  let holder = recipe.steps;
+  holder.forEach( index => {
+    let space = index.indexOf(' ');
+    result.push(index.slice(0, space));
+  });
   return result;
 };
 
