@@ -85,22 +85,13 @@ const listFoods = (recipe) => {
   // Solution code here...
   // console.log(recipe);
   let holder = recipe.ingredients;
-  
-  // holder.forEach( index => {
-  //   let ingredient = index.split(' ');
-  //   result.push(ingredient[ingredient.length - 1]);
-  // });
-  holder.forEach(index => {
-    let space = index.indexOf(' ');
-    // let temp = index.slice(space);
-    // let nextSpace = temp.indexOf(' ');
-    // result.push(temp.slice(space));
-    result.push(index.slice(space));
+  // console.log(holder);
+  holder.forEach( index => {
+    // console.log(index);
+    result.push(index.split(' ').slice(2).join(' '));
+    console.log(result);
   });
-  // result.forEach( item => {
-  //   let space = item.indexOf(' ');
-  //   item = item.slice(space);
-  // });
+ 
 
   return result;
 };
@@ -116,6 +107,14 @@ You may also use other string or array methods.
 const splitFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  let holder = recipe.ingredients;
+  holder.forEach( item => {
+    item.split(' ').forEach( word => {
+      // result.push(word.lastIndexOf(word.split(' ')));
+      result.push(word);
+      // console.log('word = ' + word);
+    });
+  });
   return result;
 };
 
@@ -156,11 +155,15 @@ For example:
 const removeEvenValues = (arr) => {
   // Solution code here...
   arr.forEach( item => {
-    if(item % 2 === 0){
-      // let place = arr.indexOf(item);
-      arr.splice(item, 1);
+    let operation = (item / 2) * 2;
+    // console.log('item: ' + item);
+    // console.log('operation: ' + operation);
+    if(operation === item){
+      let place = arr.indexOf(item);
+      arr.splice(place, 1);
     }
   });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
