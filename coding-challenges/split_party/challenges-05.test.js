@@ -83,16 +83,12 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  // console.log(recipe);
   let holder = recipe.ingredients;
-  // console.log(holder);
   holder.forEach( index => {
-    // console.log(index);
-    result.push(index.split(' ').slice(2).join(' '));
-    console.log(result);
+    let firstSlice = index.slice(index.indexOf(' ') + 1);
+    let secondSlice = firstSlice.slice(firstSlice.indexOf(' ') + 1);
+    result.push(secondSlice);
   });
- 
-
   return result;
 };
 
@@ -108,12 +104,8 @@ const splitFoods = (recipe) => {
   let result = [];
   // Solution code here...
   let holder = recipe.ingredients;
-  holder.forEach( item => {
-    item.split(' ').forEach( word => {
-      // result.push(word.lastIndexOf(word.split(' ')));
-      result.push(word);
-      // console.log('word = ' + word);
-    });
+  holder.forEach( index => {
+    result.push(index.split(' ').slice(2).join(' '));
   });
   return result;
 };
@@ -155,10 +147,7 @@ For example:
 const removeEvenValues = (arr) => {
   // Solution code here...
   arr.forEach( item => {
-    let operation = (item / 2) * 2;
-    // console.log('item: ' + item);
-    // console.log('operation: ' + operation);
-    if(operation === item){
+    if(item % 2 === 0){
       let place = arr.indexOf(item);
       arr.splice(place, 1);
     }
