@@ -146,12 +146,11 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
-  arr.forEach( item => {
-    if(item % 2 === 0){
-      let place = arr.indexOf(item);
-      arr.splice(place, 1);
+  for(let i = 0; i < arr.length; i++){
+    while( arr[i] % 2 === 0){
+      arr.splice(i, 1);
     }
-  });
+  }
   return arr;
 };
 
