@@ -100,6 +100,21 @@ hasChildrenValues(characters, 'Eddard') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  // console.log(`arr = ${arr}`);
+  // console.log(`character = ${character}`);
+  for(let index in arr){
+    // console.log(arr[index] );
+    // console.log(arr[index].name);
+    if(arr[index].name === character){
+      console.log('success');
+      console.log(`${arr[index].name} has ${arr[index].children} children`);
+      if(arr[index].children.length > 0){
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
