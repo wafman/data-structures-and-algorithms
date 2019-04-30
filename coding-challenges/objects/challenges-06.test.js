@@ -100,29 +100,34 @@ hasChildrenValues(characters, 'Eddard') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  // console.log(arr);
-  arr.forEach( index => {
-    // console.log(index);
-    // console.log(`object.keys(index) = ${Object.keys(index)}`);
-    let properties = Object.keys(index);
-    // console.log(properties);
-    Object.keys(index).forEach( property => {
-      // console.log(properties);
-      // console.log(property);
-      // console.log(property + index[property]);
-    });
-  });
-  // for(let index in arr){
-  //   if(arr[index].name === character){
-  //     console.log('success');
-  //     console.log(`${arr[index].name} has ${arr[index].children} children`);
-  //     if(arr[index].children.length > 0){
-  //       return true;
-  //     } else {
-  //       return false;
-  //     }
+  // arr.forEach( index => {
+  //   if(index.name === character){
+  //     let properties = Object.keys(index);
+  //     properties.forEach ( property => {
+  //       if(property === 'children'){
+  //         console.log('property is children');
+  //         console.log(`index[property] = ${index[property]}`);
+  //         console.log(`index[property].length = ${index[property].length}`);
+  //         if(index[property] > 0){
+  //           return true;
+  //         } else {
+  //           return false;
+  //         }
+  //       }
+  //     });
   //   }
-  // }
+  // });
+  for(let index in arr){
+    if(arr[index].name === character){
+      console.log('success');
+      console.log(`${arr[index].name} has ${arr[index].children} children`);
+      if(arr[index].children.length > 0){
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -135,17 +140,25 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
-  // for(let index in arr){
-  //   if(arr[index].name === character){
-  //     console.log('success');
-  //     console.log(`${arr[index].name} has ${arr[index].children} children`);
-  //     if(arr[index].children.length > 0){
-  //       return true;
-  //     } else {
-  //       return false;
-  //     }
+  console.log('challenge 4');
+  // arr.forEach( item => {
+  //   if(item.name === character){
+  //     let properties = Object.values(item);
+  //     // console.log(properties);
+  //     console.log(properties);
+  //     properties.forEach( entry => {
+  //       console.log(`item properties = ${properties[entry]}`);
+  //       console.log('entry = ' + entry);
+  //       // console.log(`entry children = ${entry}`);
+  //       console.log(`entry length = ${entry.length}`);
+  //       if(entry.length > 0){
+  //         return true;
+  //       } else  {
+  //         return false;
+  //       }
+  //     });
   //   }
-  // }
+  // });
 };
 
 /* ------------------------------------------------------------------------------------------------
