@@ -100,21 +100,29 @@ hasChildrenValues(characters, 'Eddard') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  // console.log(`arr = ${arr}`);
-  // console.log(`character = ${character}`);
-  for(let index in arr){
-    // console.log(arr[index] );
-    // console.log(arr[index].name);
-    if(arr[index].name === character){
-      console.log('success');
-      console.log(`${arr[index].name} has ${arr[index].children} children`);
-      if(arr[index].children.length > 0){
-        return true;
-      } else {
-        return false;
-      }
-    }
-  }
+  // console.log(arr);
+  arr.forEach( index => {
+    // console.log(index);
+    // console.log(`object.keys(index) = ${Object.keys(index)}`);
+    let properties = Object.keys(index);
+    // console.log(properties);
+    Object.keys(index).forEach( property => {
+      // console.log(properties);
+      // console.log(property);
+      // console.log(property + index[property]);
+    });
+  });
+  // for(let index in arr){
+  //   if(arr[index].name === character){
+  //     console.log('success');
+  //     console.log(`${arr[index].name} has ${arr[index].children} children`);
+  //     if(arr[index].children.length > 0){
+  //       return true;
+  //     } else {
+  //       return false;
+  //     }
+  //   }
+  // }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -127,6 +135,17 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
+  // for(let index in arr){
+  //   if(arr[index].name === character){
+  //     console.log('success');
+  //     console.log(`${arr[index].name} has ${arr[index].children} children`);
+  //     if(arr[index].children.length > 0){
+  //       return true;
+  //     } else {
+  //       return false;
+  //     }
+  //   }
+  // }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,6 +156,21 @@ Write a function named totalCharacters that takes in an array and returns the nu
 
 const totalCharacters = (arr) => {
   // Solution code here...
+  let names = 0;
+  arr.forEach( person => {
+    if(person.name){
+      names++;
+    }
+    if(person.spouse){
+      names++;
+    }
+    if(person.children){
+      for(let i = 0; i < person.children.length; i++){
+        names++;
+      }
+    }
+  });
+  return names;
 };
 
 /* ------------------------------------------------------------------------------------------------
