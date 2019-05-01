@@ -117,10 +117,12 @@ const hasChildrenValues = (arr, character) => {
   //     });
   //   }
   // });
+
+
   for(let index in arr){
     if(arr[index].name === character){
-      console.log('success');
-      console.log(`${arr[index].name} has ${arr[index].children} children`);
+      // console.log('success');
+      // console.log(`${arr[index].name} has ${arr[index].children} children`);
       if(arr[index].children.length > 0){
         return true;
       } else {
@@ -144,21 +146,32 @@ const hasChildrenEntries = (arr, character) => {
   // arr.forEach( item => {
   //   if(item.name === character){
   //     let properties = Object.values(item);
-  //     // console.log(properties);
-  //     console.log(properties);
-  //     properties.forEach( entry => {
-  //       console.log(`item properties = ${properties[entry]}`);
-  //       console.log('entry = ' + entry);
-  //       // console.log(`entry children = ${entry}`);
-  //       console.log(`entry length = ${entry.length}`);
-  //       if(entry.length > 0){
-  //         return true;
-  //       } else  {
-  //         return false;
-  //       }
+  //     Object.entries(properties).forEach( place => {
+  //       place.forEach( attribute => {
+  //         for(let i = 0; i < attribute; i++){
+  //           console.log(attribute[i]);
+  //         }
+  //       });
   //     });
   //   }
   // });
+  for(let i = 0; i < arr.length; i++){
+    // console.log(arr[i]);
+    // for(let item of Object.entries(arr[i])){
+    //   console.log('inside for loop');
+    // }
+    console.log(Object.entries(arr[i]));
+    console.log(`arr i 0 = ${Object.entries(arr[i][name])}`);
+    // if(Object.entries(arr[i][0]) === character){
+    //   console.log('success');
+    // }
+  }
+  //example 5 in class
+  //regular for loop
+  //pass for loop arr[i] into object entries
+  //for let item of object.entries(arr[i])
+  //if item[0] === spouse
+
 };
 
 /* ------------------------------------------------------------------------------------------------
