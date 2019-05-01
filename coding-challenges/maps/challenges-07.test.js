@@ -28,7 +28,6 @@ const forEachTwoToThe = (arr) => {
   // Solution code here...
   let result = [];
   arr.forEach( (input) => {
-    console.log(input);
     result.push(Math.pow(2, input));
   });
   return result;
@@ -60,6 +59,10 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (arr) => {
   // Solution code here...
+  let result = arr.map( (character) => {
+    return character.charCodeAt();
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
