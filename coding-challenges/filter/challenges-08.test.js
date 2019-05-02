@@ -26,7 +26,15 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
-  return arr.filter( word => { return word.includes('a', 'e', 'i', 'o', 'u');});
+  return arr.filter( word => {(word.match(/aeiouAEIOU/) ? word : false);});
+  // return arr.filter( word => {
+  //   let reg = /aeiou/i;
+  //   if(reg.test(word)){
+  //     return word;
+  //   } else {
+  //     return false;
+  //   }
+  // });
 };
 
 
@@ -91,7 +99,6 @@ const snorlaxData = {
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
   // Solution code here...
   return arr.filter( item => {
-    console.log(item.baseStat);
     if(item.baseStat > minBaseStat){
       return true;
     } else {
@@ -110,6 +117,10 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 
 const getStatName = (arr, minBaseStat) => {
   // Solution code here...
+  let result =  arr.filter( item => item.baseStat > minBaseStat ? item.stat.name : false);
+  return result.map( item => {
+    return item.stat.name;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
