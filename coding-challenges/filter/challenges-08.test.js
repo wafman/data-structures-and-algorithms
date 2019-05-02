@@ -167,18 +167,15 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
-  let holder =  arr.filter( person => {
-    console.log(`person.children = ${person.children}`);
-    console.log(`children length = ${person.children.length}`);
-    if(person.children.length === 0 || person.children === undefined || person.children === null){
-      console.log('has no children');
-    } else {
-      console.log('has children');
+  return arr.filter( person => {
+    if(!person.children){
+      console.log(person);
+      return person;
     }
   });
-  return holder.map( item => {
-    console.log('item = ' + item);
-  });
+  // return holder.map( item => {
+  //   console.log('item = ' + item);
+  // });
 };
 
 /* ------------------------------------------------------------------------------------------------
