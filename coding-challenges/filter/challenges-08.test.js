@@ -26,15 +26,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
-  return arr.filter( word => {(word.match(/aeiouAEIOU/) ? word : false);});
-  // return arr.filter( word => {
-  //   let reg = /aeiou/i;
-  //   if(reg.test(word)){
-  //     return word;
-  //   } else {
-  //     return false;
-  //   }
-  // });
+  let reg = /[aeiou]/i;
+  return arr.filter( word => reg.test(word));
 };
 
 
@@ -174,6 +167,18 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
+  let holder =  arr.filter( person => {
+    console.log(`person.children = ${person.children}`);
+    console.log(`children length = ${person.children.length}`);
+    if(person.children.length === 0 || person.children === undefined || person.children === null){
+      console.log('has no children');
+    } else {
+      console.log('has children');
+    }
+  });
+  return holder.map( item => {
+    console.log('item = ' + item);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
