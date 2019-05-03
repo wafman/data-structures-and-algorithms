@@ -162,12 +162,13 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
-  let avg = arr.reduce((start, current) => {
-    start.count += 1;
-    start.sum += current;
-    return (start.sum/start.count);
-  }, {count: 0, sum: 0});
-  return avg;
+  let avg = arr.reduce((acc, current) => {
+    acc.count += 1;
+    acc.sum += current;
+    return acc;
+  }, { count: 0, sum: 0 });
+  console.log(avg);
+  return avg.sum/avg.count;
 };
 
 /* ------------------------------------------------------------------------------------------------
