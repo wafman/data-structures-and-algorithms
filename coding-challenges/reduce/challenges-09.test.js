@@ -10,10 +10,10 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  arr.reduce((start, current, index) => {
-    
-  }, 1);
-  
+  let indexCount = arr.reduce((acc, current) => {
+    return acc+= 1;
+  }, 0);
+  return indexCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,11 +91,6 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (arr) => {
   // Solution code here...
-  // const reversed = arr.reduce( (arr, str, idx) => {
-  //   arr = str.split("").reduce( (rev, char) => char + rev, '' );
-  //   return arr;
-  // }, []);
-  // return reversed;
   return arr.split("").reduce((rev, char)=> char + rev, '');
 };
 
@@ -150,6 +145,11 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
+  let kids = arr.reduce( (acc, current) => {
+    (current.children) ? acc += current.children.length : acc+= 0;
+    return acc;
+  }, 0 );
+  return kids;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -162,6 +162,12 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
+  let avg = arr.reduce((start, current) => {
+    start.count += 1;
+    start.sum += current;
+    return (start.sum/start.count);
+  }, {count: 0, sum: 0});
+  return avg;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -183,6 +189,11 @@ const isPrime = (value) => {
 
 const countPrimeNumbers = (arr) => {
   // Solution code here...
+  let prime = arr.reduce( (acc, current) => {
+    (isPrime(current)) ? acc+= 1 : acc+= 0;
+    return acc;
+  }, 0);
+  return prime;
 };
 
 /* ------------------------------------------------------------------------------------------------
