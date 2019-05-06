@@ -36,13 +36,14 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
-  input.map( element => {
-    let sum = element.reduce( (acc, current) => {
+  let sum = input.map( element => {
+    return element.reduce( (acc, current) => {
       return acc += current;
     }, 0);
-    return sum;
   });
-  
+  return sum.reduce( (acc, current) => {
+    return acc += current;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,7 +60,13 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
- 
+  let divisible = input.map( element => {
+    let checked = element.map( el => {
+      // console.log(`el = ${el}`);
+      return (el % 5 !== 0) ? element.pop(el) : false;
+    });
+    console.log(`checked = ${checked}`);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
