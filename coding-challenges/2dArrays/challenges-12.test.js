@@ -71,15 +71,7 @@ const errands = [
   }
 ];
 
-const howManyTreats = (arr) => {
-  arr.map( store => {
-    return store.items.reduce((acc, current) => {
-      // console.log(`acc = ${acc.quantity} current = ${current.quantity}`);
-      acc.quantity += current.quantity;
-      return acc;
-    });
-  });
-};
+const howManyTreats = (arr) => arr.reduce((accumulator, currentVal) => currentVal.store === 'Pet store' ? currentVal.items[1].quantity : null);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -113,14 +105,19 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 
 const calculateProduct = (numbers) => {
   // Solution code here...
-  numbers.forEach( arr => {
-    // console.log(arr);
-    arr.forEach( element => {
-      let total = 1;
-      // console.log(element);
-      return total *= element;
-    });
-  });
+  let totalAnswer = 1;
+  let total = 1;
+  for(let i = 0; i < numbers.length; i++){
+    // console.log(`numbers i = ${numbers[i]}`);
+    for(let j = 0; j < numbers[i].length; j++){
+      total *= numbers[i][j];
+      // console.log(`total=${total}`);
+      // console.log(`numbers i j =${numbers[i][j]}`);
+    }
+    totalAnswer *= total;
+    // console.log(`totalAnswer =${totalAnswer}`);
+  }
+  return totalAnswer;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -199,12 +196,28 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 const excel = (str) => {
   // Solution code here...
   // console.log(str.split());
+  let total = 0;
+  let answer = [];
   str.split().forEach(element => {
-    for(let el in element){
-      // console.log(el);
+    for(let el of element){
+      console.log(el);
+      if(el === ','){
+        continue;
+      } else if(el === '\n'){
+        answer.push(total);
+        total = 0;
+      } else {
+        total += el;
+      }
     }
-    // console.log(element);
+    console.log(element);
   });
+  console.log(answer);
+  let redAnswer = answer.reduce((acc, current) => {
+    return acc += current;
+  },0);
+  console.log(redAnswer);
+  return redAnswer;
 };
 
 /* ------------------------------------------------------------------------------------------------
