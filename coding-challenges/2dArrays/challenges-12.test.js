@@ -25,9 +25,9 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 const grandTotal = (stores) => {
   // Solution code here...
   return stores.reduce((acc,current, index) => {
-    console.log(`index = ${index}`);
-    console.log('acc before math = ', acc);
-    console.log('current before math= ', current);
+    // console.log(`index = ${index}`);
+    // console.log('acc before math = ', acc);
+    // console.log('current before math= ', current);
     return acc += current;
     
     
@@ -76,7 +76,7 @@ const errands = [
 const howManyTreats = (arr) => {
   arr.map( store => {
     return store.items.reduce((acc, current) => {
-      console.log(`acc = ${acc.quantity} current = ${current.quantity}`);
+      // console.log(`acc = ${acc.quantity} current = ${current.quantity}`);
       acc.quantity += current.quantity;
       return acc;
     });
@@ -116,10 +116,10 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 const calculateProduct = (numbers) => {
   // Solution code here...
   numbers.forEach( arr => {
-    console.log(arr);
+    // console.log(arr);
     arr.forEach( element => {
       let total = 1;
-      console.log(element);
+      // console.log(element);
       return total *= element;
     });
   });
@@ -173,6 +173,17 @@ let lowestWeeklyTemperatureData = [
 
 const lowestWeeklyAverage = (weather) => {
   // Solution code here...
+  let weeks = [];
+  weather.forEach( week => {
+    let total = 0;
+    for(let i = 0; i < week.length; i++){
+      total += week[i];
+    }
+    weeks.push(Math.ceil(total/7));
+  });
+  return weeks.reduce((acc, current) => {
+    return (acc < current) ? acc : current;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
