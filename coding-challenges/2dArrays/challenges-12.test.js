@@ -192,30 +192,23 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 
 const excel = (str) => {
   // Solution code here...
-  // console.log(str.split());
-  let total = 0;
   let answer = [];
-  str.split().forEach(element => {
-    for(let el of element){
-      console.log(el);
-      if(el === ','){
-        continue;
-      } else if(el === '\n'){
-        answer.push(total);
-        total = 0;
-      } else {
-        total += el;
-      }
-    }
-    console.log(element);
+
+  let rows = str.split('\n');
+
+  rows.forEach( element => {
+    let total = 0;
+    let column = element.split(',');
+    column.forEach(number => {
+      let num = parseInt(number);
+      total += num;
+    });
+    answer.push(total);
   });
-  console.log(answer);
-  let redAnswer = answer.reduce((acc, current) => {
-    return acc += current;
-  },0);
-  console.log(redAnswer);
-  return redAnswer;
+  return answer;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
