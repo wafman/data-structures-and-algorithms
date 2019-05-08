@@ -108,14 +108,11 @@ const calculateProduct = (numbers) => {
   let totalAnswer = 1;
   let total = 1;
   for(let i = 0; i < numbers.length; i++){
-    // console.log(`numbers i = ${numbers[i]}`);
     for(let j = 0; j < numbers[i].length; j++){
       total *= numbers[i][j];
-      // console.log(`total=${total}`);
-      // console.log(`numbers i j =${numbers[i][j]}`);
     }
     totalAnswer *= total;
-    // console.log(`totalAnswer =${totalAnswer}`);
+    total = 1;
   }
   return totalAnswer;
 };
