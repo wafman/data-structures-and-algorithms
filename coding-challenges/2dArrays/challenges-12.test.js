@@ -23,22 +23,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-  return stores.reduce((acc,current, index) => {
-    // console.log(`index = ${index}`);
-    // console.log('acc before math = ', acc);
-    // console.log('current before math= ', current);
-    return acc += current;
-    
-    
-
-    // acc.map((element, index) => {
-    //   console.log(`element = ${element}`);
-    //   return element;
-    // });
-    
-    // return acc[i];
-  },0);
+  let arr = [];
+  for(let i = 0; i < hoursOpen.length; i++){
+    let total = 0;
+    stores.forEach(store => {
+      total += store[i];
+    });
+    arr.push(total);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,6 +46,8 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  console.log(hours);
+  console.log(data);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -200,6 +195,13 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 
 const excel = (str) => {
   // Solution code here...
+  // console.log(str.split());
+  str.split().forEach(element => {
+    for(let el in element){
+      // console.log(el);
+    }
+    // console.log(element);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
