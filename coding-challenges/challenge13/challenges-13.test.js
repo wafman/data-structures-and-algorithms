@@ -44,6 +44,7 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,6 +57,15 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  // console.log(str);
+  let answer = str.split('');
+  answer.forEach((element, index) => {
+    // console.log(`element ${element} index ${index}`);
+    if(index % 2 === 0){
+      answer.pop(index);
+    }
+  });
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,10 +73,7 @@ CHALLENGE 5
 
 Write a function named allHappy that takes in an array of strings and returns a Boolean indicating whether all those strings contain ":)".
 ------------------------------------------------------------------------------------------------ */
-
-const allHappy = (arr) => {
-  // Solution code here...
-};
+const allHappy = (arr) => arr.every(element => element.includes(':)'));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -76,6 +83,9 @@ Write a function named findAnything that takes in an array of strings, along wit
 
 const findAnything = (arr, target) => {
   // Solution code here...
+  let answer = [];
+  arr.forEach(element => (element.includes(target)) ? answer.push(element) : false);
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
