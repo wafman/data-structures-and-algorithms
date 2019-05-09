@@ -42,10 +42,7 @@ Write a function named standardizePhoneNumbers that takes in an array of phone n
 For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
-const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
-  
-};
+const standardizePhoneNumbers = (arr) => arr.map(num => `${num.substring(1,4)}${num.substring(6,9)}${num.substring(10,14)}`)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -55,18 +52,7 @@ Write a function named onlyOddChars that takes in a string and returns only the 
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
-const onlyOddChars = (str) => {
-  // Solution code here...
-  // console.log(str);
-  let answer = str.split('');
-  answer.forEach((element, index) => {
-    // console.log(`element ${element} index ${index}`);
-    if(index % 2 === 0){
-      answer.pop(index);
-    }
-  });
-  return answer;
-};
+const onlyOddChars = (str) => str.substring(1,2)+str.substring(3,4)+str.substring(5,6)+str.substring(7,8)+str.substring(9,10)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -108,8 +94,10 @@ Return a two-dimensional array with the same roster, but where anyone whose name
 For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again', 'still Brook']] returns [['Actual Person'], ['Human Person']]
 ------------------------------------------------------------------------------------------------ */
 
+// const unenrollBrook = (arr) => arr.forEach(element => element.forEach( el => (el.includes('Brook')) ? element.pop(el) : false));
+
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  return arr.map(x => x.filter(y => !y.includes('Brook')));
 };
 
 /* ------------------------------------------------------------------------------------------------
