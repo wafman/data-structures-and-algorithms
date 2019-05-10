@@ -109,13 +109,11 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  arr.forEach( element => {
-    // console.log(Object.keys(element));
-    if(Object.keys(element) === property){
-      // console.log('found property');
-    }
-  })
-  // return arr.sort((a,b) => (a.property > b.property) ? 1 : (a.property < b.property) ? -1 : 0);
+  if(property === 'name'){
+    return arr.sort((a, b) => a.name < b.name ? -1 : 1);
+  }else{
+    return arr.sort((a, b) => a.price - b.price);
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
