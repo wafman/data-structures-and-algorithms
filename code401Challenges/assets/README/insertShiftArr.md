@@ -8,4 +8,4 @@ Since you can't add to or subtract from an array in Java, I decided to create a 
 
 ## Solution 
 [Code](../src/main/java/code401Challenges/ArrayShift.java)
-![Whiteboard to insert shift array problem](../assets/img/insertShiftArr_whiteboard.jpg)
+![Whiteboard to insert shift array problem](../img/insertShiftArr_whiteboard.jpg)
