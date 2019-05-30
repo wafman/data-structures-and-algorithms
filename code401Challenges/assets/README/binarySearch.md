@@ -8,4 +8,4 @@ Initialize a low at 0 high at length of array minus 1 and index at 0. Set the mi
 
 ## Solution 
 [Code](../../src/main/java/code401Challenges/BinarySearch.java)
-![Whiteboard to insert shift array problem](../img/BinarySearch_whiteboard.jpg)
+![Whiteboard to insert shift array problem](../img/BinarySearch.jpg)
