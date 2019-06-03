@@ -5,3 +5,4 @@ This repo contains my practice in Java for Data Structures and Algorithms.
 - [Day 1: Array Reverse]()
 - [Day 2: Array Shift](./assets/README/insertShiftArr.md)
 - [Day 3: Binary Search](./assets/README/binarySearch.md)
+- [Day 5: Linked Lists](./assets/README/linkedlists.md)
