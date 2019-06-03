@@ -51,8 +51,10 @@ public class LinkedList {
         while(currentNode != null){
             answer += answer.format("%d\n", currentNode.data);
             currentNode = currentNode.next;
+            if(currentNode == null){
+                answer += answer.format("null");
+            }
         }
-        answer += answer.format("null");
         return answer;
     }
 
