@@ -28,6 +28,7 @@ public class LinkedList {
         }
     }
 
+
     public boolean includes(int checkValue){
         Node currentNode = head;
         if(!isEmpty()){
@@ -74,4 +75,18 @@ public class LinkedList {
             currentNode = currentNode.next;
         }
     }
+
+    public void append(int data){
+        if(isEmpty()){
+            head = new Node(data);
+        } else {
+            Node currentNode = head;
+            while(currentNode.next != null){
+                currentNode = currentNode.next;
+            }
+            currentNode.next = new Node(data);
+        }
+    }
+
+    
 }
