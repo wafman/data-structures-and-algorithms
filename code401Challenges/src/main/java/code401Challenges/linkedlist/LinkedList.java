@@ -28,6 +28,7 @@ public class LinkedList {
         }
     }
 
+
     public boolean includes(int checkValue){
         Node currentNode = head;
         if(!isEmpty()){
@@ -74,4 +75,49 @@ public class LinkedList {
             currentNode = currentNode.next;
         }
     }
-}
+
+    public void append(int data){
+        if(isEmpty()){
+            head = new Node(data);
+        } else {
+            Node currentNode = head;
+            while(currentNode.next != null){
+                currentNode = currentNode.next;
+            }
+            currentNode.next = new Node(data);
+        }
+    }
+
+    public void insertBefore(int target, int value){
+        if(isEmpty()){
+            head = new Node(value);
+        } else if(target == head.data){
+            insert(value);
+        }else {
+            Node currentNode = head;
+            while(currentNode.next.data != target){
+                currentNode = currentNode.next;
+            }
+            Node beforeNode = new Node(value);
+            beforeNode.next = currentNode.next;
+            currentNode.next = beforeNode;
+        }
+    }
+
+    public void insertAfter(int target, int value){
+        if(isEmpty()){
+            head = new Node(value);
+        } else {
+            Node currentNode = head;
+            while(currentNode != null){
+                if(currentNode.data == target){
+                    Node afterNode = new Node(value);
+                    afterNode.next = currentNode.next;
+                    currentNode.next = afterNode;
+                }
+                currentNode = currentNode.next;
+            }
+        }
+    }
+
+}//end of class

@@ -1,9 +1,6 @@
 package code401Challenges.linkedlist;
 
 import org.junit.Test;
-import sun.awt.image.ImageWatched;
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
@@ -56,4 +53,82 @@ public class LinkedListTest {
         assertEquals(expectedOutput, classUnderTest.print());
     }
 
-}
+    @Test
+    public void testAppend(){
+        LinkedList classUnderTest = new LinkedList();
+        int num = 10;
+        classUnderTest.insert(15);
+        classUnderTest.insert(20);
+        classUnderTest.insert(25);
+        classUnderTest.append(num);
+        String expectedOutput = "25\n" +
+                "20\n" +
+                "15\n" +
+                "10\n" +
+                "null";
+        assertEquals(expectedOutput, classUnderTest.print());
+    }
+
+    @Test
+    public void testInsertBefore(){
+        LinkedList classUnderTest = new LinkedList();
+        classUnderTest.insert(2);
+        classUnderTest.insert(3);
+        classUnderTest.insert(1);
+        classUnderTest.insertBefore(3,5);
+        String expectedOutput = "1\n" +
+                "5\n" +
+                "3\n" +
+                "2\n" +
+                "null";
+        assertEquals(expectedOutput, classUnderTest.print());
+    }
+
+    @Test
+    public void testInsertAfter(){
+        LinkedList classUnderTest = new LinkedList();
+        classUnderTest.insert(2);
+        classUnderTest.insert(3);
+        classUnderTest.insert(1);
+        classUnderTest.insertAfter(3,5);
+        String expectedOutput = "1\n" +
+                "3\n" +
+                "5\n" +
+                "2\n" +
+                "null";
+        assertEquals(expectedOutput, classUnderTest.print());
+    }
+
+    @Test
+    public void testInsertAfter_multiples(){
+        LinkedList classUnderTest = new LinkedList();
+        classUnderTest.insert(2);
+        classUnderTest.insert(3);
+        classUnderTest.insert(1);
+        classUnderTest.insertAfter(3,5);
+        classUnderTest.insertAfter(2,5);
+        String expectedOutput = "1\n" +
+                "3\n" +
+                "5\n" +
+                "2\n" +
+                "5\n" +
+                "null";
+        assertEquals(expectedOutput, classUnderTest.print());
+    }
+
+    @Test
+    public void testInsertAfter_finalValueNode(){
+        LinkedList classUnderTest = new LinkedList();
+        classUnderTest.insert(2);
+        classUnderTest.insert(3);
+        classUnderTest.insert(1);
+        classUnderTest.insertAfter(2,5);
+        String expectedOutput = "1\n" +
+                "3\n" +
+                "2\n" +
+                "5\n" +
+                "null";
+        assertEquals(expectedOutput, classUnderTest.print());
+    }
+
+}// end of testing class

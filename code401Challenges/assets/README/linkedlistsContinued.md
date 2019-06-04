@@ -10,13 +10,13 @@
 Create a package called linkedlist. Within package create separate node and linked lists classes. Within the node class, instantiate the node with what type of data will be its possible values. Within the linked lists class, instantiate an empty list. Write all functions within the linked list class. 
 
 ## API
-- ```insert(int data)```
-  - insert a value at start of linked list
-- ```includes(int data)```
-  - return boolean based on whether the data provided is within the linked list.
-- ```print()```
-  - print all values in the linked list.
+- ```append(int data)```
+  - allows you to insert a value to the end of the linked list
+- ```insertBefore(int target, int value)```
+  - allows you to insert a value into the linked list before the provided target.
+- ```insertAfter(int target, int value)```
+  - allows you to insert a value into the linked list after the provided target.
 
 ## Solution 
 - [Code](../../src/main/java/code401Challenges/linkedlist)
-- Whiteboard (not applicable for lab)
+- [Whiteboard](../img/linkedListWhiteboard.jpg)
