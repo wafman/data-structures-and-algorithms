@@ -17,6 +17,17 @@ Create a package called linkedlist. Within package create separate node and link
 - ```insertAfter(int target, int value)```
   - allows you to insert a value into the linked list after the provided target.
 
+## Big O
+- ```append(int data)```
+  - O(n)
+  - has to cycle through entire linked list to insert
+- ```insertBefore(int target, int value)```
+  - O(n)
+  - has to cycle through entire linked list up to target in order to insert
+- ```insertAfter(int target, int value)```
+  - O(n)
+  - has to cycle through entire linked list up to target to insert
+
 ## Solution 
 - [Code](../../src/main/java/code401Challenges/linkedlist)
 - [Whiteboard](../img/linkedListWhiteboard.jpg)
