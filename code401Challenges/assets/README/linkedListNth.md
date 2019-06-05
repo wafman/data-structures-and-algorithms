@@ -24,4 +24,4 @@
 
 ## Solution 
 - [Code](../../src/main/java/code401Challenges/linkedlist)
-- [Whiteboard](../img/)
+- [Whiteboard](../img/linkedListNthWhiteboard.jpg)
