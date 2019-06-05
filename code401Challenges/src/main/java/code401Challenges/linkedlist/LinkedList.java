@@ -120,4 +120,22 @@ public class LinkedList {
         }
     }
 
+    public int returnNfromEnd(int n){
+        Node currentNode = head;
+        if(isEmpty()){
+            return head.data;
+        } else {
+            int count = 0;
+            while(currentNode != null){
+                count++;
+                currentNode = currentNode.next;
+            }
+            currentNode = head;
+            for(int i = 0; i < count - n - 1; i++){
+                currentNode = currentNode.next;
+            }
+            return currentNode.data;
+        }
+    }
+
 }//end of class

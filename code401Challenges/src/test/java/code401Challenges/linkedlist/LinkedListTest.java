@@ -131,4 +131,36 @@ public class LinkedListTest {
         assertEquals(expectedOutput, classUnderTest.print());
     }
 
+    @Test
+    public void testReturnNFromEnd_begginingOfList(){
+        LinkedList classUnderTest = new LinkedList();
+        classUnderTest.insert(2);
+        classUnderTest.insert(8);
+        classUnderTest.insert(3);
+        classUnderTest.insert(1);
+        int expectedOutput = 2;
+        assertEquals("function should return 0th number(2) node data from the end of the linked list",
+                expectedOutput,
+                classUnderTest.returnNfromEnd(0));
+    }
+
+    @Test
+    public void testReturnNFromEnd_EndOfList(){
+        LinkedList classUnderTest = new LinkedList();
+        classUnderTest.insert(2);
+        classUnderTest.insert(8);
+        classUnderTest.insert(3);
+        classUnderTest.insert(1);
+        int expectedOutput = 3;
+        assertEquals("function should return 2nd number (3) from end of linked list",
+                expectedOutput,
+                classUnderTest.returnNfromEnd(2));
+    }
+
+    @Test (expected = NullPointerException.class)
+    public void testReturnNFromEnd_emptyLinkedList(){
+        LinkedList classUnderTest = new LinkedList();
+        assertNull("should return null", classUnderTest.returnNfromEnd(0));
+    }
+
 }// end of testing class

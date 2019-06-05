@@ -1,4 +1,4 @@
-# Insert Shift Array
+# Linked Lists Continued
 
 ## Challenge
 - Create Node and Linked List Classes
