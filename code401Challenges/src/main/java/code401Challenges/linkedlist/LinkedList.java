@@ -138,4 +138,38 @@ public class LinkedList {
         }
     }
 
+    public static LinkedList mergeLists(LinkedList list1, LinkedList list2){
+        Node list1Current = list1.head;
+        Node list2Current = list2.head;
+
+        while(list1Current != null || list2Current != null){
+
+            Node list1Next = list1Current.next;
+            Node list2Next = list2Current.next;
+
+            if(list1Next == null){
+                while(list2Current != null){
+                    list1.append(list2Current.data);
+                    list2Current = list2Current.next;
+                }
+                return list1;
+            }
+            if(list2Next == null){
+                list1Current.next = list2Current;
+                list2Current.next = list1Next;
+
+                return list1;
+            }
+
+            list2Current.next = list1Next;
+            list1Current.next = list2Current;
+
+            list1Current = list1Next;
+            list2Current = list2Next;
+
+        }
+        list2.head = list2Current;
+        return list1;
+    }
+
 }//end of class
