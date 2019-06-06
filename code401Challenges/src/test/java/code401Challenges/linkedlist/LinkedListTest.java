@@ -2,6 +2,7 @@ package code401Challenges.linkedlist;
 
 import org.junit.Test;
 
+
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
@@ -161,6 +162,29 @@ public class LinkedListTest {
     public void testReturnNFromEnd_emptyLinkedList(){
         LinkedList classUnderTest = new LinkedList();
         assertNull("should return null", classUnderTest.returnNfromEnd(0));
+    }
+
+    @Test
+    public void testMergeList(){
+        LinkedList classUnderTest = new LinkedList();
+        LinkedList a = new LinkedList();
+        LinkedList b = new LinkedList();
+        a.insert(2);
+        a.insert(3);
+        a.insert(1);
+        b.insert(4);
+        b.insert(9);
+        b.insert(5);
+        LinkedList.mergeLists(a,b);
+        String expectedOutput = "1\n" +
+                "5\n" +
+                "3\n" +
+                "9\n" +
+                "2\n" +
+                "4\n" +
+                "null";
+        assertEquals("should return a joined linked list", expectedOutput,
+                a.print());
     }
 
 }// end of testing class
