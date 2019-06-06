@@ -187,4 +187,46 @@ public class LinkedListTest {
                 a.print());
     }
 
+    @Test
+    public void testMergeList_1stListUneven(){
+        LinkedList classUnderTest = new LinkedList();
+        LinkedList a = new LinkedList();
+        LinkedList b = new LinkedList();
+        a.insert(3);
+        a.insert(1);
+        b.insert(4);
+        b.insert(9);
+        b.insert(5);
+        LinkedList.mergeLists(a,b);
+        String expectedOutput = "1\n" +
+                "5\n" +
+                "3\n" +
+                "9\n" +
+                "4\n" +
+                "null";
+        assertEquals("should return a joined linked list", expectedOutput,
+                a.print());
+    }
+
+    @Test
+    public void testMergeList_2ndListUneven(){
+        LinkedList classUnderTest = new LinkedList();
+        LinkedList a = new LinkedList();
+        LinkedList b = new LinkedList();
+        a.insert(2);
+        a.insert(3);
+        a.insert(1);
+        b.insert(9);
+        b.insert(5);
+        LinkedList.mergeLists(a,b);
+        String expectedOutput = "1\n" +
+                "5\n" +
+                "3\n" +
+                "9\n" +
+                "2\n" +
+                "null";
+        assertEquals("should return a joined linked list", expectedOutput,
+                a.print());
+    }
+
 }// end of testing class
