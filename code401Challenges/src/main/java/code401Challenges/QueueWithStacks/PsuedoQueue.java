@@ -7,11 +7,13 @@ public class PsuedoQueue {
     Stack stackOne;
     Stack stackTwo;
 
+    //constructor
     public PsuedoQueue(){
         this.stackOne = new Stack();
         this.stackTwo = new Stack();
     }
 
+    //add values to the queue using the stack instances
     public void enqueue(int value){
         if(stackOne.isEmpty()){
             stackOne.push(value);
@@ -26,6 +28,7 @@ public class PsuedoQueue {
         }
     }
 
+    //remove first node from queue using stack instance
     public Integer dequeue(){
         if(stackOne.peek() == null){
             return null;
