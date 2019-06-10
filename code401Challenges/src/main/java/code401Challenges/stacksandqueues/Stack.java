@@ -10,16 +10,29 @@ public class Stack {
         count = 0;
     }
 
+    //getters
+
+    public Node getTop() {
+        return top;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    //helper functions
+
     public boolean isEmpty(){
         return top == null;
     }
+
+    //feature functions
 
     public void push(int value){
         if(isEmpty() == true){
             top = new Node(value);
             count++;
         } else {
-            System.out.println("Stack is empty");
             Node previousTop = top;
             top = new Node(value);
             top.next = previousTop;
