@@ -50,7 +50,7 @@ public class Stack {
         return value;
     }
 
-    public int peek(){
+    public Integer peek(){
         if(isEmpty() == true){
             System.out.println("Stack is empty");
         }
