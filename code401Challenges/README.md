@@ -9,3 +9,4 @@ This repo contains my practice in Java for Data Structures and Algorithms.
 - [Day 6: Linked List Code Challenge](./assets/README/linkedlistsContinued.md)
 - [Day 7: Linked List Continued](./assets/README/linkedListNth.md)
 - [Day 8: Linked List Merge Lists](./assets/README/linkedMergeLists.md)
+- [Lab 10: Stacks and Queues](./assets/README/stacksandqueues.md)
