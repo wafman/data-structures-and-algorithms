@@ -44,3 +44,6 @@
     - removes the last node from the queue.
   - ```peek()```
     - retrieves the value from the front node. 
+
+## Code
+[Code](../../src/main/java/code401Challenges/stacksandqueues)
