@@ -36,4 +36,4 @@
 
 ## Solution 
 - [Code](../../src/main/java/code401Challenges/QueueWithStacks)
-- [Whiteboard](../img/mergedListsWhiteboard.jpg)
+- [Whiteboard](../img/psuedoQueueWB.jpg)
