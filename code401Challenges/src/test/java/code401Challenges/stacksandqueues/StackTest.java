@@ -54,7 +54,7 @@ public class StackTest {
         Stack stack = new Stack();
         stack.push(5);
         stack.push(10);
-        assertEquals("should return 10", 10, stack.peek());
+        assertTrue("should return 10",  stack.peek() == 10);
     }
 
 }

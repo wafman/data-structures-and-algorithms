@@ -29,7 +29,7 @@ public class Stack {
     //feature functions
 
     public void push(int value){
-        if(isEmpty() == true){
+        if(isEmpty()){
             top = new Node(value);
             count++;
         } else {
@@ -41,7 +41,7 @@ public class Stack {
     }
 
     public int pop(){
-        if(isEmpty() == true) {
+        if(isEmpty()) {
             System.out.println("Stack is empty");
         }
         int value = top.value;
@@ -50,9 +50,10 @@ public class Stack {
         return value;
     }
 
-    public int peek(){
-        if(isEmpty() == true){
-            System.out.println("Stack is empty");
+    public Integer peek(){
+        if(isEmpty()){
+//            System.out.println("Stack is empty");
+            return null;
         }
         return top.value;
     }
