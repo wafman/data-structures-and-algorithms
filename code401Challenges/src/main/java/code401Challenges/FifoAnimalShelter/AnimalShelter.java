@@ -68,9 +68,6 @@ public class AnimalShelter<T> {
                 } else if(current == this.last){
                     this.last = prev;
                 }
-                if(current != prev){
-                    prev.next = prev.next.next;
-                }
                 count--;
                 return current.value;
             }
