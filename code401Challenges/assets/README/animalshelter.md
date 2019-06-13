@@ -1,4 +1,4 @@
-# Queues with Stacks
+# Animal Shelter
 
 ## Challenge
 - Create an animal shelter class
