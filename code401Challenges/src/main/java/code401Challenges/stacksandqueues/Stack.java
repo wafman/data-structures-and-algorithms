@@ -1,8 +1,8 @@
 package code401Challenges.stacksandqueues;
 
 
-public class Stack {
-    private Node top;
+public class Stack<T> {
+    private Node<T> top;
     private int count;
 
     public Stack(){
@@ -28,7 +28,7 @@ public class Stack {
 
     //feature functions
 
-    public void push(int value){
+    public void push(T value){
         if(isEmpty()){
             top = new Node(value);
             count++;
@@ -40,17 +40,17 @@ public class Stack {
         }
     }
 
-    public int pop(){
+    public T pop(){
         if(isEmpty()) {
             System.out.println("Stack is empty");
         }
-        int value = top.value;
+        T value = top.value;
         top = top.next;
         count--;
         return value;
     }
 
-    public Integer peek(){
+    public T peek(){
         if(isEmpty()){
 //            System.out.println("Stack is empty");
             return null;

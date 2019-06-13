@@ -16,7 +16,7 @@ public class StackTest {
     public void testPush_singleValue(){
         Stack stack = new Stack();
         stack.push(5);
-        assertTrue("top should return 5", stack.getTop().value == 5);
+        assertEquals("top should return 5", 5, stack.getTop().value);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class StackTest {
         stack.push(5);
         stack.push(10);
         stack.pop();
-        assertTrue("should return 5", stack.getTop().value == 5);
+        assertEquals("should return 5", 5, stack.getTop().value);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class StackTest {
         stack.pop();
         stack.pop();
         stack.pop();
-        assertTrue("should return true", stack.isEmpty() == true);
+        assertTrue("should return true", stack.isEmpty());
     }
 
     @Test
@@ -54,7 +54,7 @@ public class StackTest {
         Stack stack = new Stack();
         stack.push(5);
         stack.push(10);
-        assertTrue("should return 10",  stack.peek() == 10);
+        assertEquals("should return 10",  10, stack.peek());
     }
 
 }

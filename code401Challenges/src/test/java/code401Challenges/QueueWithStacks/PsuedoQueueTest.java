@@ -17,14 +17,14 @@ public class PsuedoQueueTest {
     public void testEnque_singleValue(){
         PsuedoQueue p = new PsuedoQueue();
         p.enqueue(5);
-        assertTrue("should return 5",  p.stackOne.peek() == 5);
+        assertEquals("should return 5",  5, p.stackOne.peek());
     }
 
     @Test
     public void testDequeue_singleValue(){
         PsuedoQueue p = new PsuedoQueue();
         p.enqueue(5);
-        assertTrue("should return null", p.dequeue() == 5);
+        assertEquals("should return null", 5, p.dequeue());
     }
 
     @Test
@@ -34,10 +34,10 @@ public class PsuedoQueueTest {
         p.enqueue(10);
         p.enqueue(15);
         p.enqueue(20);
-        assertTrue("should return 5", p.dequeue() == 5 );
-        assertTrue("should return 10", p.dequeue() == 10);
-        assertTrue("should return 15", p.dequeue() == 15);
-        assertTrue("should return 20l", p.dequeue() == 20);
+        assertEquals("should return 5", 5, p.dequeue());
+        assertEquals("should return 10", 10,  p.dequeue());
+        assertEquals("should return 15", 15, p.dequeue());
+        assertEquals("should return 20l", 20, p.dequeue());
         assertTrue("should return null", p.dequeue() == null);
     }
 
