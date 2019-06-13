@@ -12,3 +12,4 @@ This repo contains my practice in Java for Data Structures and Algorithms.
 - [Lab 10: Stacks and Queues](./assets/README/stacksandqueues.md)
 - [Code Challenge 11:Queues with Stacks](./assets/README/queuesWithStacks.md)
 - [Code Challenge 12: FifoAnimalShelter](./assets/README/animalshelter.md)
+- [Code Challenge 13: MultiBracketValidation](./assets/README/bracketvalidation.md)

@@ -1,8 +1,8 @@
 package code401Challenges.stacksandqueues;
 
-public class Queue {
-    private Node front;
-    private Node last;
+public class Queue<T> {
+    private Node<T> front;
+    private Node<T> last;
     private int count;
 
     public Queue(){
@@ -43,17 +43,17 @@ public class Queue {
         }
     }
 
-    public int dequeue(){
+    public T dequeue(){
         if(isEmpty() == true){
             System.out.println("Queue is empty");
         }
-        int value = front.value;
+        T value = front.value;
         front = front.next;
         count--;
         return value;
     }
 
-    public int peek(){
+    public T peek(){
         if(isEmpty() == true){
             System.out.println("Queue is empty");
         }

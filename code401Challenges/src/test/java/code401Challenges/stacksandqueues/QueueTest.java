@@ -16,7 +16,7 @@ public class QueueTest {
     public void testEnqueue_singleValue(){
         Queue queue = new Queue();
         queue.enqueue(5);
-        assertTrue("should return 5", queue.getFront().value == 5);
+        assertEquals("should return 5", 5, queue.getFront().value);
     }
 
     @Test

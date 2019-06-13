@@ -3,9 +3,9 @@ package code401Challenges.QueueWithStacks;
 
 import code401Challenges.stacksandqueues.Stack;
 
-public class PsuedoQueue {
-    Stack stackOne;
-    Stack stackTwo;
+public class PsuedoQueue<T> {
+    Stack<T> stackOne;
+    Stack<T> stackTwo;
 
     //constructor
     public PsuedoQueue(){
@@ -14,7 +14,7 @@ public class PsuedoQueue {
     }
 
     //add values to the queue using the stack instances
-    public void enqueue(int value){
+    public void enqueue(T value){
         if(stackOne.isEmpty()){
             stackOne.push(value);
         } else {
@@ -29,7 +29,7 @@ public class PsuedoQueue {
     }
 
     //remove first node from queue using stack instance
-    public Integer dequeue(){
+    public T dequeue(){
         if(stackOne.peek() == null){
             return null;
         } else {

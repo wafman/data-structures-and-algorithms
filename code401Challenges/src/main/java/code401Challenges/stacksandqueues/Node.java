@@ -1,10 +1,10 @@
 package code401Challenges.stacksandqueues;
 
-public class Node {
-    Node next;
-    int value;
+public class Node<T> {
+    Node<T> next;
+    T value;
 
-    public Node(int value){
+    public Node(T value){
         this.value = value;
     }
 }
