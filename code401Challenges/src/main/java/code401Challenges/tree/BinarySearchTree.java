@@ -18,10 +18,10 @@ public class BinarySearchTree<T extends Comparable<T>>  {
             return node;
         }
         //if root is set, add down the tree
-        if(t.compareTo(node.value) < 0){
-            node.leftChild = addHelper(node.leftChild, t);
-        } else if(t.compareTo(node.value) > 0){
-            node.rightChild = addHelper(node.rightChild, t);
+        if(t.compareTo(node.getValue()) < 0){
+            node.setLeftChild(addHelper(node.getLeftChild(), t));
+        } else if(t.compareTo(node.getValue()) > 0){
+            node.setRightChild(addHelper(node.getRightChild(), t));
         }
         return node;
     }
@@ -36,10 +36,16 @@ public class BinarySearchTree<T extends Comparable<T>>  {
             return false;
         }
         //check if node is equal to value
-        if(node.value.equals(t)){
+        if(node.getValue().equals(t)){
             return true;
         }
         //check the leftChild and rightChild values
-        return this.containsHelper(node.leftChild, t) || this.containsHelper(node.rightChild, t);
+        return this.containsHelper(node.getLeftChild(), t) || this.containsHelper(node.getRightChild(), t);
+    }
+
+    //getters
+
+    public Node<T> getRoot() {
+        return root;
     }
 }

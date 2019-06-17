@@ -3,72 +3,85 @@ package code401Challenges.tree;
 import java.util.ArrayList;
 
 public class BinaryTree<T> {
-    Node<T> root;
+    private Node<T> root;
 
 
     public BinaryTree(){
         root = null;
     }
 
-    public ArrayList<T> preOrder(Node<T> node){
+    public ArrayList<T> preOrder(){
         ArrayList<T> output = new ArrayList<>();
-        if(node == null){
+        if(root == null){
             return output;
         }
-        preOrderHelper(node, output);
+        preOrderHelper(root, output);
 
         return output;
     }
 
     public void preOrderHelper(Node<T> node, ArrayList<T> arr){
-        arr.add(node.value);
-        if(node.leftChild != null){
-            preOrderHelper(node.leftChild, arr);
+        arr.add(node.getValue());
+        if(node.getLeftChild() != null){
+            preOrderHelper(node.getLeftChild(), arr);
         }
-        if(node.rightChild != null){
-            preOrderHelper(node.rightChild, arr);
+        if(node.getRightChild() != null){
+            preOrderHelper(node.getRightChild(), arr);
         }
     }
 
 
-    public ArrayList<T> inOrder(Node<T> node){
+    public ArrayList<T> inOrder(){
         ArrayList<T> output = new ArrayList<>();
-        if(node == null){
+        if(root == null){
             return output;
         }
-        inOrderHelper(node, output);
+        inOrderHelper(root, output);
         return output;
     }
 
     public void inOrderHelper(Node<T> node, ArrayList<T> arr){
-        if(node.leftChild != null){
-            inOrderHelper(node.leftChild, arr);
+        if(node.getLeftChild() != null){
+            inOrderHelper(node.getLeftChild(), arr);
         }
 
-        arr.add(node.value);
+        arr.add(node.getValue());
 
-        if(node.rightChild != null){
-            inOrderHelper(node.rightChild, arr);
+        if(node.getRightChild() != null){
+            inOrderHelper(node.getRightChild(), arr);
         }
     }
 
-    public ArrayList<T> postOrder(Node<T> node){
+    public ArrayList<T> postOrder(){
         ArrayList<T> output = new ArrayList<>();
-        if(node == null){
+        if(root == null){
             return output;
         }
-        postOrderHelper(node, output);
+        postOrderHelper(root, output);
         return output;
     }
 
     public void postOrderHelper(Node<T> node, ArrayList<T> arr){
-        if(node.leftChild != null){
-            postOrderHelper(node.leftChild, arr);
+        if(node.getLeftChild() != null){
+            postOrderHelper(node.getLeftChild(), arr);
         }
-        if(node.rightChild != null){
-            postOrderHelper(node.rightChild, arr);
+        if(node.getRightChild() != null){
+            postOrderHelper(node.getRightChild(), arr);
         }
-        arr.add(node.value);
+        arr.add(node.getValue());
     }
 
+    //getters
+
+    public Node<T> getRoot() {
+        return root;
+    }
+
+
+    //setters
+
+
+    public void setRoot(Node<T> root) {
+        this.root = root;
+    }
 }
