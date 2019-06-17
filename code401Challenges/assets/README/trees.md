@@ -31,7 +31,11 @@
   - ```add(T t)```
     - checks if the root is null, adds the value to the root if true. Else adds to the left or right child depending on the value of the root and value being inserted. Method will add value to left child if value is less than root, and to right child if value is greater than root. 
   - ```contains(T t)```
-    - returns true or false of the binary search tree contains the value. 
+    - returns true or false of the binary search tree contains the value.
+
+## Helping Resources
+- Geeks for geeks
+    - https://www.geeksforgeeks.org/binary-search-tree-data-structure/
  
 
 ## Code
