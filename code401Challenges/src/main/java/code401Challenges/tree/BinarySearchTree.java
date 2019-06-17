@@ -11,6 +11,7 @@ public class BinarySearchTree<T extends Comparable<T>>  {
         root = addHelper(root, t);
     }
 
+    //inspiration from https://www.geeksforgeeks.org/binary-search-tree-data-structure/
     public Node<T> addHelper(Node<T> node, T t){
         //set root if it is null
         if(node == null){
