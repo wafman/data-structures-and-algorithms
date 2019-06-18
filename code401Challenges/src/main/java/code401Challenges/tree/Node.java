@@ -32,4 +32,8 @@ public class Node<T> {
     public void setRightChild(Node<T> rightChild) {
         this.rightChild = rightChild;
     }
+
+    public void setValue(T value) {
+        this.value = value;
+    }
 }
