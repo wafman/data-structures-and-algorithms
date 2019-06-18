@@ -9,7 +9,7 @@ public class FizzBuzzTree<T> {
 
     public BinaryTree<Node> fizzBuzzTree(BinaryTree<Node> binaryTree){
         if (binaryTree.getRoot() == null) {
-            return binaryTree;
+            throw new IllegalArgumentException("Tree is empty");
         }
         fizzSearch(binaryTree.getRoot());
         return binaryTree;
