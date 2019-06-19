@@ -9,6 +9,7 @@
   - preOrder
   - inOrder
   - postOrder
+  - breadthFirst
 - Binary Search Tree
   - add
   - contains
@@ -27,6 +28,8 @@
     - traverses the tree through a Left, Root, Right method.
   - ```postOrder()```
     - traverses the tree through a Left, Right, Root method.
+  - ```breadthFirst(BinaryTree binaryTree)```
+    - traverses the tree level, by level. A tree with input 1-5, filling left child first would produce an out put of: 1,2,3,4,5.
 - Binary Search Tree
   - ```add(T t)```
     - checks if the root is null, adds the value to the root if true. Else adds to the left or right child depending on the value of the root and value being inserted. Method will add value to left child if value is less than root, and to right child if value is greater than root. 
@@ -40,3 +43,6 @@
 
 ## Code
 [Code](../../src/main/java/code401Challenges/tree)
+
+## Code Challenge 17 Whiteboard
+[Whiteboard](../img/breadthFirstWB.jpg)

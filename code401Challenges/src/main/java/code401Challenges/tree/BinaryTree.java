@@ -1,6 +1,6 @@
 package code401Challenges.tree;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class BinaryTree<T> {
     private Node<T> root;
@@ -69,6 +69,28 @@ public class BinaryTree<T> {
             postOrderHelper(node.getRightChild(), arr);
         }
         arr.add(node.getValue());
+    }
+
+    public String breadthFirst(BinaryTree<Node> binaryTree){
+        Queue<Node> queue = new LinkedList<Node>();
+        Node<T> node;
+        String answer = "";
+        if(binaryTree.getRoot() == null){
+            throw new IllegalArgumentException("tree is empty");
+        }
+        queue.add(binaryTree.getRoot());
+        while(!queue.isEmpty()){
+            node = queue.remove();
+            answer += node.getValue() + "\n";
+            if(node.getLeftChild() != null){
+                queue.add(node.getLeftChild());
+            }
+            if(node.getRightChild() != null){
+                queue.add(node.getRightChild());
+            }
+
+        }
+        return answer;
     }
 
     //getters

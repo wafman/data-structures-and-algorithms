@@ -15,3 +15,4 @@ This repo contains my practice in Java for Data Structures and Algorithms.
 - [Code Challenge 13: MultiBracketValidation](./assets/README/bracketvalidation.md)
 - [Lab 15: Trees](./assets/README/trees.md)
 - [Code Challenge 16: Fizz Tree](./assets/README/fizzTree.md)
+- [Code Challenge 17: Breadth First Traversal](./assets/README/trees.md)
