@@ -72,13 +72,23 @@ public class BinaryTree<T> {
     }
 
     public String breadthFirst(BinaryTree<Node> binaryTree){
-        Queue<Node> queue = new LinkedList<>();
+        Queue<Node> queue = new LinkedList<Node>();
+        Node<T> node;
         String answer = "";
-        queue.add(binaryTree.root);
-        while(queue.peek() != null){
-            answer += queue.remove();
-            queue.add(root.getLeftChild());
-            queue.add(root.getRightChild());
+        if(binaryTree.getRoot() == null){
+            throw new IllegalArgumentException("tree is empty");
+        }
+        queue.add(binaryTree.getRoot());
+        while(!queue.isEmpty()){
+            node = queue.remove();
+            answer += node.getValue() + "\n";
+            if(node.getLeftChild() != null){
+                queue.add(node.getLeftChild());
+            }
+            if(node.getRightChild() != null){
+                queue.add(node.getRightChild());
+            }
+
         }
         return answer;
     }

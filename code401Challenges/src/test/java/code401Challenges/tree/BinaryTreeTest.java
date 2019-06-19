@@ -58,9 +58,16 @@ public class BinaryTreeTest {
                 this.binaryTree.postOrder());
     }
 
+    @Test (expected = IllegalArgumentException.class)
+    public void testBreadthFirst_emptyTree(){
+        BinaryTree test = new BinaryTree();
+        BinaryTree bt = new BinaryTree();
+        test.breadthFirst(bt);
+    }
+
     @Test
     public void testBreadthFirst_simpleValues(){
-        BinaryTree<T> bt = new BinaryTree<>();
+        BinaryTree bt = new BinaryTree();
         String expectedOutput = "1\n" +
                 "2\n" +
                 "3\n" +
