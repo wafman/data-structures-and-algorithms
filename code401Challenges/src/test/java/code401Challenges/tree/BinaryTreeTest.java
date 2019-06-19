@@ -58,4 +58,18 @@ public class BinaryTreeTest {
                 this.binaryTree.postOrder());
     }
 
+    @Test
+    public void testBreadthFirst_simpleValues(){
+        BinaryTree<T> bt = new BinaryTree<>();
+        String expectedOutput = "1\n" +
+                "2\n" +
+                "3\n" +
+                "4\n" +
+                "5\n" +
+                "6\n" +
+                "7\n";
+        assertEquals("should return numbers in numerical order 1-7.", expectedOutput,
+                bt.breadthFirst(binaryTree));
+    }
+
 }
