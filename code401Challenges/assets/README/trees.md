@@ -30,6 +30,8 @@
     - traverses the tree through a Left, Right, Root method.
   - ```breadthFirst(BinaryTree binaryTree)```
     - traverses the tree level, by level. A tree with input 1-5, filling left child first would produce an out put of: 1,2,3,4,5.
+  - ```maxValue(Node node)```
+    - traverses tree to find the maximum value within the tree
 - Binary Search Tree
   - ```add(T t)```
     - checks if the root is null, adds the value to the root if true. Else adds to the left or right child depending on the value of the root and value being inserted. Method will add value to left child if value is less than root, and to right child if value is greater than root. 
@@ -46,3 +48,6 @@
 
 ## Code Challenge 17 Whiteboard
 [Whiteboard](../img/breadthFirstWB.jpg)
+
+## Code Challenge 18 Whiteboard
+[Whiteboard](../img/maxValWB.jpg)
