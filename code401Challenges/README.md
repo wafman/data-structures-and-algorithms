@@ -16,4 +16,4 @@ This repo contains my practice in Java for Data Structures and Algorithms.
 - [Lab 15: Trees](./assets/README/trees.md)
 - [Code Challenge 16: Fizz Tree](./assets/README/fizzTree.md)
 - [Code Challenge 17: Breadth First Traversal](./assets/README/trees.md)
-- [Code Challenge 18: Max Value](./assets/README/tress.md)
+- [Code Challenge 18: Max Value](./assets/README/trees.md)
