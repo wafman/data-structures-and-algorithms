@@ -93,6 +93,20 @@ public class BinaryTree<T> {
         return answer;
     }
 
+    public int maxValue(Node<Integer> node){
+      if(node == null){
+          throw new IllegalArgumentException("tree is empty");
+      }
+      int max = node.getValue();
+      if(node.getLeftChild() != null){
+          max = Math.max(max, maxValue(node.getLeftChild()));
+      }
+      if(node.getRightChild() != null){
+          max = Math.max(max, maxValue(node.getRightChild()));
+      }
+      return max;
+    }
+
     //getters
 
     public Node<T> getRoot() {

@@ -79,4 +79,17 @@ public class BinaryTreeTest {
                 bt.breadthFirst(binaryTree));
     }
 
+    @Test
+    public void testMaxValue_simpleValues(){
+        BinaryTree bt = new BinaryTree();
+        assertEquals("should return 7", 7, bt.maxValue(binaryTree.getRoot()));
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testMqxValue_expectedFail(){
+        BinaryTree test = new BinaryTree();
+        BinaryTree bt = new BinaryTree();
+        test.maxValue(bt.getRoot());
+    }
+
 }
