@@ -36,7 +36,8 @@ In the insertion sort, you will write a function that takes in an array as a par
         arr[j + 1] <-- arr[j]
         j <-- j - 1
         
-      arr[j + 1] <-- temp```
+      arr[j + 1] <-- temp
+   ```
 
 ## Readings and References
 - Video:
