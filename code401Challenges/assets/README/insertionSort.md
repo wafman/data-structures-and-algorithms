@@ -29,3 +29,6 @@
 
 ## Whiteboard
 [Whiteboard](../img/InsertionSortWB.jpg)
+
+## Lecture
+- [Code Challenge 26: Insertion Sort Lecture](./assets/README/InsertionSortLecture.md)
