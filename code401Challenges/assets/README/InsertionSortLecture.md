@@ -36,13 +36,14 @@ In the insertion sort, you will write a function that takes in an array as a par
         arr[j + 1] <-- arr[j]
         j <-- j - 1
         
-      arr[j + 1] <-- temp```
+      arr[j + 1] <-- temp
+   ```
 
 ## Readings and References
 - Video:
   - [Geeks for Geeks](https://www.youtube.com/watch?v=OGzPmgsI-pQ)
 - Read:
- - [Geeks for Geeks](https://www.geeksforgeeks.org/insertion-sort/)
- - [Java Point](https://www.javatpoint.com/insertion-sort-in-java)
+  - [Geeks for Geeks](https://www.geeksforgeeks.org/insertion-sort/)
+  - [Java Point](https://www.javatpoint.com/insertion-sort-in-java)
 - Bookmark
   - [Class Lecture:](https://github.com/codefellows/seattle-java-401d4)
