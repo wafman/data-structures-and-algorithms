@@ -19,3 +19,4 @@ This repo contains my practice in Java for Data Structures and Algorithms.
 - [Code Challenge 18: Max Value](./assets/README/trees.md)
 - [Code Challenge 26: Insertion Sort](./assets/README/insertionSort.md)
 - [Code Challenge 27: Merge Sort](./assets/README/mergeSort.md)
+- [Code Challenge 28: Quick Sort](./assets/README/QuickSort.md)
