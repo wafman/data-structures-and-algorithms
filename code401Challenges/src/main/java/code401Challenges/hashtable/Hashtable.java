@@ -35,11 +35,26 @@ public class Hashtable {
         }
     }
 
-    public void get(){
-
+    public String get(String key){
+        int searchHashKey = hash(key);
+        while(this.map[searchHashKey] != null){
+            if(this.map[searchHashKey].getKey() == key){
+                return this.map[searchHashKey].getValue();
+            }
+            this.map[searchHashKey] = this.map[searchHashKey].getNext();
+        }
+        return null;
     }
 
-    public void contains(){
-
+    public boolean contains(String key){
+        int containsHashKey = hash(key);
+        boolean contains = false;
+        while(this.map[containsHashKey] != null){
+            if(this.map[containsHashKey].getKey() == key){
+                contains = true;
+            }
+            this.map[containsHashKey] = this.map[containsHashKey].getNext();
+        }
+        return contains;
     }
 }
