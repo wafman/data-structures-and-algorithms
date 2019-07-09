@@ -1,6 +1,5 @@
 package code401Challenges;
 
-import com.sun.xml.internal.bind.v2.model.annotation.Quick;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
