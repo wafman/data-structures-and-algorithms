@@ -22,7 +22,7 @@
   - https://stackoverflow.com/questions/12506655/how-can-i-remove-all-leading-and-trailing-punctuation
 
 ## Code
-[Code](../../src/main/java/code401Challenges/hashtable/RepeatedWord.java)
+[Code](../../src/main/java/code401Challenges/RepeatedWord/RepeatedWord.java)
 
 
 ## Whiteboard
