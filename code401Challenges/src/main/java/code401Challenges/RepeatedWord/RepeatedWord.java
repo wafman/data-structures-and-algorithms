@@ -1,8 +1,6 @@
 package code401Challenges.RepeatedWord;
 
 
-import code401Challenges.hashtable.Hashtable;
-
 import java.util.HashMap;
 
 public class RepeatedWord {
