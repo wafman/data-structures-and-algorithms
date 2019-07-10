@@ -18,6 +18,7 @@ public class RepeatedWord {
         HashMap<String, Integer> hashMap = new HashMap<>();
 
         for(String word : words){
+            //regex from stack overflow, see readme for link.
             temp = word.toLowerCase().replaceAll("[^a-zA-Z]+$", "");
             if(hashMap.containsKey(temp)){
                 return temp;
