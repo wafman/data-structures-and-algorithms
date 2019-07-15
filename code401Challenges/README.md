@@ -22,3 +22,4 @@ This repo contains my practice in Java for Data Structures and Algorithms.
 - [Code Challenge 28: Quick Sort](./assets/README/QuickSort.md)
 - [Code Challenge 31: Repeated Word](./assets/README/RepeatedWord.md)
 - [Code Challenge 32: Tree Intersection](./assets/README/TreeIntersection.md)
+- [Code Challenge 33: Left Join](./assets/README/LeftJoin.md)
