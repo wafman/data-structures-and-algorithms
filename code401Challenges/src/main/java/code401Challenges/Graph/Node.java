@@ -1,29 +1,51 @@
 package code401Challenges.Graph;
 
-import java.util.List;
+import java.util.HashSet;
 
-public class Node {
+public class Node<T> {
 
-    String label;
-    private List<Node> neighbors;
+    public T label;
+    private HashSet<Edge> neighbors;
 
-    public Node(String label){
+    //constructor
+    public Node(T label){
         this.label = label;
+        this.neighbors = new HashSet<>();
     }
 
-    public String getLabel() {
+    //methods
+    public boolean addNeighbor(Node<T> node){
+        Edge edge = new Edge(node);
+        this.neighbors.add(edge);
+        Edge edge1 = new Edge(this);
+        node.neighbors.add(edge1);
+        return true;
+    }
+
+    public boolean addNeighbor(Node<T> node, int weight){
+        Edge edge = new Edge(node, weight);
+        this.neighbors.add(edge);
+        Edge edge1 = new Edge(this, weight);
+        node.neighbors.add(edge1);
+        return true;
+    }
+
+
+    //getters&&setters
+
+    public T getLabel() {
         return label;
     }
 
-    public void setLabel(String label) {
+    public void setLabel(T label) {
         this.label = label;
     }
 
-    public List<Node> getNeighbors() {
+    public HashSet<Edge> getNeighbors() {
         return neighbors;
     }
 
-    public void setNeighbors(List<Node> neighbors) {
+    public void setNeighbors(HashSet<Edge> neighbors) {
         this.neighbors = neighbors;
     }
 }
