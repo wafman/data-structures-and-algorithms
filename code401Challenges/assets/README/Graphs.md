@@ -34,7 +34,7 @@
 ## Code
 [Code](../../src/main/java/code401Challenges/Graph/Graph.java)
 
-## Whiteboard
-![BreadthFirstSearch](../img/BreadthFirstWB.jpg)
+## Whiteboard                   
+![](../img/BreadthFirstWB.jpg)
 
 
