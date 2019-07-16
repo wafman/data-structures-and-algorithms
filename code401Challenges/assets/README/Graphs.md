@@ -35,6 +35,6 @@
 [Code](../../src/main/java/code401Challenges/Graph/Graph.java)
 
 ## Whiteboard                   
-![](../img/BreadthFirstWB.jpg)
+- ![](../img/BreadthFirstWB.jpg)
 
 
