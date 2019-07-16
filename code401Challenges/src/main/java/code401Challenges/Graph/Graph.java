@@ -28,6 +28,8 @@ public class Graph<T> {
     }
 
     //get nodes
+
+
     public HashSet<Node<T>> getAdjNodesList() {
         return adjNodesList;
     }
@@ -42,5 +44,27 @@ public class Graph<T> {
         return this.adjNodesList.size();
     }
 
+    //breadth first search
+    public ArrayList<Node> breadthFristSearch(Node<T> node){
+        Queue<Node> toBeVisited = new LinkedList<>();
+        HashSet<Node> visited = new HashSet<>();
+        ArrayList<Node> output = new ArrayList<>();
+        toBeVisited.add(node);
+        visited.add(node);
+
+        while(!toBeVisited.isEmpty()){
+            Node current = toBeVisited.remove();
+            output.add(current);
+
+            HashSet<Edge> neighbors = current.getNeighbors();
+            for(Edge neighbor: neighbors){
+                if(!visited.contains(neighbor.getNode())){
+                    toBeVisited.add(neighbor.getNode());
+                    visited.add(neighbor.getNode());
+                }
+            }
+        }
+        return output;
+    }
 
 }

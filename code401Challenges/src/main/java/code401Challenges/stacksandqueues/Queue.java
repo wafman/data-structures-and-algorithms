@@ -30,7 +30,7 @@ public class Queue<T> {
 
     //feature functions
 
-    public void enqueue(int data){
+    public void enqueue(T data){
         Node n = new Node(data);
         if(isEmpty() == true){
             front = n;
