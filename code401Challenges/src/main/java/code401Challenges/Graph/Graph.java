@@ -52,20 +52,13 @@ public class Graph<T> {
         toBeVisited.add(node);
         visited.add(node);
 
-
         while(!toBeVisited.isEmpty()){
-            //queue interface uses poll to remove instead of remove. poll will return the node when deleting from queue
             Node current = toBeVisited.remove();
             output.add(current);
-            //System.out.println(current.label);
-//            visited.add(current);
-
 
             HashSet<Edge> neighbors = current.getNeighbors();
             for(Edge neighbor: neighbors){
-
                 if(!visited.contains(neighbor.getNode())){
-//                    System.out.println(neighbor.getNode().label);
                     toBeVisited.add(neighbor.getNode());
                     visited.add(neighbor.getNode());
                 }
