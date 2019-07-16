@@ -34,7 +34,12 @@
 ## Code
 [Code](../../src/main/java/code401Challenges/Graph/Graph.java)
 
-## Whiteboard                   
-[Breadth First Search](../img/BreadthFirstWB.jpg)
+
+## Whiteboard
+[Breadth FirstSearch](../img/BreadthFirstWB.jpg)
+
+[*** if image is not showing, please proceed to](../img)
+  - proceed to open the image called BreadthFirstWB.jpg
+
 
 
