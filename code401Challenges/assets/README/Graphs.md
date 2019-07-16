@@ -20,6 +20,8 @@
   - get all the neighbors of the node passed in
 - ```getSize()```
   - return the number of nodes in the graph
+- ```breadthFirstSearch(Node<T> node)```
+  - return a the nodes in the graph
 
 ## Helping Resources
 - BaeluDung
@@ -31,5 +33,8 @@
 
 ## Code
 [Code](../../src/main/java/code401Challenges/Graph/Graph.java)
+
+## Whiteboard
+![](../img/BreadthFirstWB.jpg)
 
 
