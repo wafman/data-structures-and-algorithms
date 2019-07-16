@@ -2,6 +2,7 @@ package code401Challenges.Graph;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import static org.junit.Assert.*;
@@ -90,6 +91,37 @@ public class GraphTest {
         expectedOutput.add(three);
 
         assertTrue(graph.getAdjNodesList().equals(expectedOutput));
+    }
+
+    @Test
+    public void testBreadthFirstSearch(){
+        Graph graph = new Graph();
+        Node one = graph.addNode(1);
+        Node two = graph.addNode(2);
+        Node three = graph.addNode(3);
+        Node four = graph.addNode(4);
+        Node five = graph.addNode(5);
+
+        one.addNeighbor(two);
+        one.addNeighbor(three);
+        two.addNeighbor(four);
+        five.addNeighbor(three);
+
+        ArrayList<Node> expectedOutput = new ArrayList<>();
+        expectedOutput.add(one);
+        expectedOutput.add(three);
+        expectedOutput.add(two);
+        expectedOutput.add(five);
+        expectedOutput.add(four);
+
+        ArrayList result = graph.breadthFristSearch(one);
+        for(int i = 0; i < expectedOutput.size(); i++){
+            Node node = (Node) result.get(i);
+            System.out.println(node.label);
+            assertEquals(expectedOutput.get(i), result.get(i));
+        }
+
+
     }
 
 }
