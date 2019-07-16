@@ -1,47 +1,45 @@
 package code401Challenges.Graph;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.ArrayList;
+import java.util.*;
 
-public class Graph {
+public class Graph<T> {
 
-    private int n;
-    private Map<Node, List<Node>> adjNodesList;
+    private HashSet<Node<T>> adjNodesList;
 
     public Graph(){
-        this.adjNodesList = new HashMap<Node, List<Node>>();
+        this.adjNodesList = new HashSet<>();
     }
 
     //add node
-    public Node addNode(String label){
+    public Node<T> addNode(T label){
         Node node = new Node(label);
-        adjNodesList.putIfAbsent(node, new ArrayList<>());
+        this.adjNodesList.add(node);
         return node;
     }
 
     //add edge
-    public void addEdge(String label1, String label2){
-        Node node1 = new Node(label1);
-        Node node2 = new Node(label2);
-        adjNodesList.get(node1).add(node2);
-        adjNodesList.get(node2).add(node1);
+    public boolean addEdge(Node<T> source, Node<T> destination){
+        if(this.adjNodesList.contains(source) && this.adjNodesList.contains(destination)){
+            this.adjNodesList.add(source);
+            this.adjNodesList.add(destination);
+            return true;
+        }
+        return false;
     }
 
     //get nodes
-    public Map<Node, List<Node>> getNodes() {
+    public HashSet<Node<T>> getAdjNodesList() {
         return adjNodesList;
     }
 
     //get neighbors
-    public List<Node> getNeightbors(Node node){
+    public HashSet<Edge> getNeighbors(Node<T> node){
         return node.getNeighbors();
     }
 
     //size
     public int getSize(){
-        return adjNodesList.size();
+        return this.adjNodesList.size();
     }
 
 
