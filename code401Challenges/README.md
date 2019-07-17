@@ -24,3 +24,4 @@ This repo contains my practice in Java for Data Structures and Algorithms.
 - [Code Challenge 32: Tree Intersection](./assets/README/TreeIntersection.md)
 - [Code Challenge 33: Left Join](./assets/README/LeftJoin.md)
 - [Code Challenge 36: Breadth First Search Graph](./assets/README/Graphs.md)
+- [Code Challenge 37: Get Edge](./assets/README/GetEdge.md)
