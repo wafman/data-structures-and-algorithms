@@ -22,6 +22,8 @@
   - return the number of nodes in the graph
 - ```breadthFirstSearch(Node<T> node)```
   - return a the nodes in the graph
+- ```depthFirstSearch(Node<T> node)```
+  - return a the nodes in the graph
 
 ## Helping Resources
 - BaeluDung
