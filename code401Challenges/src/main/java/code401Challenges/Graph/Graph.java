@@ -67,4 +67,27 @@ public class Graph<T> {
         return output;
     }
 
+    //depth first search
+    public ArrayList<Node> depthFirstSearch(Node<T> node){
+        Stack stack = new Stack();
+        HashSet<Node> visited = new HashSet<>();
+        ArrayList<Node> output = new ArrayList<>();
+        stack.push(node);
+        visited.add(node);
+        while(!stack.isEmpty()){
+            Node current = (Node) stack.pop();
+            output.add(current);
+            HashSet<Edge> neighbors = current.getNeighbors();
+            for(Edge neightbor: neighbors ){
+                if(!visited.contains(neightbor.getNode())){
+                    stack.push(neightbor.getNode());
+                    visited.add(neightbor.getNode());
+                }
+            }
+        }
+        return output;
+    }
+
+
+
 }
